@@ -21,7 +21,7 @@ if tab == "Tạo mã QR":
     room_number = st.text_input("Nhập số phòng:")
     if st.button("Tạo QR Code"):
         if room_number:
-            qr_url = f"https://orderdanacity.streamlit.app/?room={room_number}"  # Link đến ứng dụng đặt hàng
+            qr_url = f"https://orderdanacitytest.streamlit.app/?room={room_number}"  # Link đến ứng dụng đặt hàng
             qr_image = create_qr_code(qr_url)
             new_qr = pd.DataFrame({"Phòng": [room_number], "Link": [qr_url]})
             qr_data = pd.concat([qr_data, new_qr], ignore_index=True)
